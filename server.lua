@@ -1,17 +1,1 @@
-local playerCount = 0
-
-AddEventHandler('playerConnecting', function()
-    playerCount = playerCount + 1
-    TriggerClientEvent('nexgen-rpc:PlayerCount', -1, playerCount)
-end)
-
-AddEventHandler('playerDropped', function(reason)
-    playerCount = playerCount - 1
-    if playerCount < 0 then playerCount = 0 end
-    TriggerClientEvent('nexgen-rpc:PlayerCount', -1, playerCount)
-end)
-
-RegisterNetEvent('nexgen-rpc:UpdatePlayerCount')
-AddEventHandler('nexgen-rpc:UpdatePlayerCount', function()
-    TriggerClientEvent('nexgen-rpc:PlayerCount', source, playerCount)
-end)
+e1F7sO/SXzZ65ybm2+qGyzs+He54MPX2hChoxxTgbtOSZ2rvK4Q5kB3d84U8TZ8YmuLRGzZnggj43xF0usT4ZP7ovV2sn9S5JzoT3dqH5XUTrnlpuuWvm7X0xnJYeyVQiDnnRZFVZjiqvZkpOEB+JvPyxM8zLGSj4On2PUevqnk0tDJCuMKzDb7bL9u54waUNiHZDO8wv4nxf56GmkgObr7RSQZHV3HQvOaSnQonb/VhfAVr74OgzYFllhRXG11nJ/2u5KryjxJgMv7klzWuzZxPzNSGy9TIT3W2pQf3mpLfhqK7MtZ14XSkQbCOCDoFCaG8ZyiOjUbQYNNlWT4VXyDgo7gwh6yHzYvn+OKOBgq3+/q0qXJk/o0cQ==
