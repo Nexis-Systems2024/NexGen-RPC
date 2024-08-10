@@ -51,7 +51,7 @@ CreateThread(function()
     while true do
         Citizen.Wait(1)
         SetRP()
-        SetDiscordRichPresenceAssetText('Westline')
+        SetDiscordRichPresenceAssetText('SERVER_NAME')
 
         local currentTime = GetGameTimer()
         if (currentTime - lastUpdate) > updateInterval then
